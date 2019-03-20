@@ -1,0 +1,19 @@
+.tier.tier_gold {
+    position: absolute;
+    top: -100px;
+    z-index: 10;
+}
+
+.stage.big, .stage.medium, .stage.small, .stage.mega {
+background-image: url(/fileadmin/user_upload/national-uk/2016/UK-PREM_HEARTHSTONE-HEADER_nologo.jpg);
+background-size:100%;
+}
+
+.stage.big, .stage.medium{
+	background-size:100%;
+	height:530px !important; 
+}
+
+.title-div{
+	z-index:10 !importants;
+}
