@@ -56,7 +56,7 @@
 			// Act on the event
 			$("html").fadeOut(function () {
 			
-			location="TEPmap.php";
+			location="map.php";
 		});
 	});
 /*Buttons for mailing list*/
@@ -79,8 +79,67 @@
 <title>
 	Elsewhere: Social Journalism
 </title>
+<script>
+	$(document).ready(function () {
+    $("#delCookie").click(function(){
+        del_cookie("cookie");   
+    });
+    
+    console.log(document.cookie);
+    var visit = getCookie("cookie");
+    if (visit == null) {
+        $("#myModal").modal("show");
+        var expire = new Date();
+        expire = new Date(expire.getTime() + 7776000000);
+        document.cookie = "cookie=here; expires=" + expire;
+    }
+});
+
+function del_cookie(name)
+{
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function getCookie(c_name) {
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1) {
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1) {
+        c_value = null;
+    } else {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1) {
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start, c_end));
+    }
+    return c_value;
+}
+</script>
 </head>
 <body>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div id="myModal" class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Hey, first time?</h3>
+      </div>
+      <div class="modal-body">
+        <p>Looks like it's your first time at The Elsewhere Project. We suggest you head over to the 'About' section to get a better idea about the website and how it works.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default articlesubmit" data-dismiss="modal" onclick="window.location.href='/about.php'">About Elsewhere</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];

@@ -12,18 +12,22 @@ input[type=text]:focus {
 .formtag{
     padding: 20px
 }
+#myModal {
+  background-color: #FAF9F8;
+  font-family: Roboto;
+}
 .articlesubmit {
 	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
-	background:-moz-linear-gradient(top, #feffef 5%, #ffffff 100%);
-	background:-webkit-linear-gradient(top, #feffef 5%, #ffffff 100%);
-	background:-o-linear-gradient(top, #feffef 5%, #ffffff 100%);
-	background:-ms-linear-gradient(top, #feffef 5%, #ffffff 100%);
-	background:linear-gradient(to bottom, #feffef 5%, #ffffff 100%);
+	background:-moz-linear-gradient(top, #FAF9F8 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #FAF9F8 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #FAF9F8 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #FAF9F8 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #FAF9F8 5%, #ffffff 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
-	background-color:#feffef;
+	background-color:#FAF9F8;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
@@ -31,12 +35,11 @@ input[type=text]:focus {
 	display:inline-block;
 	cursor:pointer;
 	color:#32485e;
-	font-family:Arial;
+	font-family: Roboto;
 	font-size:15px;
 	font-weight:bold;
 	padding:11px 23px;
 	text-decoration:none;
-	text-shadow:0px -1px 0px #2b665e;
 }
 .articlesubmit:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
@@ -57,7 +60,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 	text-align:center;
 	height:100%;
-	color:#32485e;
+	background-color:#FAF9F8;
 }
 /* Elements */
 h2{
@@ -66,6 +69,12 @@ h2{
 	letter-spacing:5px;
 	font-size:50px;
 	text-align:right;
+	text-transform:uppercase;
+	color:#6C6C6C;
+}
+h4{
+	font-size:30px;
+	text-align:left;
 	text-transform:uppercase;
 	color:#6C6C6C;
 }
@@ -139,14 +148,11 @@ h1{
 	color:#ffffff;
 	font-size:20px;
 }
-.navbar-fixed-top{
-	padding:0;
-}
 .navbar-fixed-bottom{
 	width:100%;
 	height:25px;
 	line-height:25px;
-	background-color:#feffef;
+	background-color: #FAF9F8;
 	text-align:center;
 	color:#000000;
 	
@@ -170,13 +176,13 @@ h1{
 	height:40px;
 	font-size:20px;
 	border-radius:25px;
-	background-color:#feffef;
-	color:#000000;
+	background-color:#93A0B4;
+	color:#dc872a;
 	border:none;
 	transition:0.3s ease-in-out;
 }
 #elsewhereButton:hover{
-	background-color:#faffb3;
+	background-color:#292937;
 }
 #tag-line{
 	font-size:18px;
@@ -187,14 +193,6 @@ h1{
 }
 #landing-page-title {
 	z-index:50;
-}
-.row{
-	padding:0;
-	margin-right:0;
-	margin-left:0;
-}
-.container-fluid{
-	padding:0;
 }
 #test-db-button{
 	position:relative;
@@ -312,18 +310,68 @@ h1{
 .mailing-list-article{
 	width:auto;
 }
-#mailing-button{
+#upload-button{
 	position:absolute;
 	bottom:30px;
 	left:25px;
 	z-index:49;
 }
-#mailing-button-detail{
+#upload-button-detail{
 	line-height:25px;
 	height:25px;
 	font-size:20px;
 	border-radius:12px;
-	background-color:#feffef;
+	background-color:#FAF9F8;
+	opacity:0.8;
+	border:none;
+    color:#000000
+}
+#latest-stories-button{
+	position:absolute;
+	bottom:130px;
+	left:25px;
+	z-index:49;
+}
+#latest-stories-button-detail{
+	line-height:25px;
+	height:25px;
+	font-size:20px;
+	border-radius:12px;
+	background-color:#FAF9F8;
+	opacity:0.8;
+	border:none;
+    color:#000000
+}
+#latest-stories-sidebar{
+	position:absolute;
+	right:0px;
+	width:350px;
+	background-color: #292937;
+	z-index:49;
+	border-left:solid 1px #dc872a;
+	padding:10px;
+}
+.latest-story-card{
+	border: solid 1px #FAF9F8;
+	width:auto;
+	padding:10px;
+	border-radius: 5px;
+}
+.latest-story-card-text{
+	color:#ffffff;
+}
+#about-button{
+	position:absolute;
+	bottom:80px;
+	left:25px;
+	z-index:49;
+}
+#about-button-detail{
+	line-height:25px;
+	height:25px;
+	font-size:20px;
+	border-radius:12px;
+	background-color:#FAF9F8;
 	opacity:0.8;
 	border:none;
     color:#000000
@@ -405,5 +453,6 @@ h1{
 	top:58px;
 }
 p {
-    font-size: 18px
+    font-size:18px;
+    text-align:left;
 }

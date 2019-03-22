@@ -1,18 +1,33 @@
 <?php
 	include("header.php");
 ?>
-
+<div class="collapse" id="latest-stories-sidebar">
+  <div class="card">
+  <div class="card-body latest-story-card">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text latest-story-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+  <div id='latest-stories-button'>
+  <button class="btn btn-primary articlesubmit" type="button" data-toggle="collapse" data-target="#latest-stories-sidebar" aria-expanded="false" aria-controls="collapseExample">
+    Latest Stories
+  </button>
+  </div>
+  <div id='upload-button'>
+  <button type="button" class="articlesubmit" onclick="window.location.href='/upload.php'">Upload An Article</button>
+  </div>
+  <div id='about-button'>
+  <button type="button" class="articlesubmit" onclick="window.location.href='/about.php'">About</button>
+  </div>
+  </div>
 <div class="row">
-	<div id='mailing-button'>
-	<button type="button" class="articlesubmit" onclick="window.location.href='/upload.php'">Upload An Article</button>
-	</div>
-	</div>
-<div class="col-xs-12" id="mapspace">
+<div class="col-md-10" id="mapspace">
 </div>
 </div>
 <script type="text/javascript">
   function initialize() { 
-	var stylesArray=  [{"featureType":"landscape","elementType":"all","stylers":[{"color":"#206040"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#feffef"}]},{"featureType":"road","elementType":"all","stylers":[{"color":"#339966"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#339966"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"visibility":"simplified"}][{"color":"#ffffff"}]},{"featureType":"administrative.province","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
+	var stylesArray=  [{"featureType":"landscape","elementType":"all","stylers":[{"color":"#292937"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#FAF9F8"}]},{"featureType":"road","elementType":"all","stylers":[{"color":"#339966"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#93A0B4"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"visibility":"simplified"}][{"color":"#ffffff"}]},{"featureType":"administrative.province","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
   var styledMap = new google.maps.StyledMapType(stylesArray,
     {name: "Styled Map"});
     google.maps.visualRefresh = true;
